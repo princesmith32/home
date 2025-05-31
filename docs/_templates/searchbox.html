@@ -1,0 +1,12 @@
+{% extends "!searchbox.html" %}
+{%- block extrahead %}
+<div role="search" class="search-container">
+  <form id="rtd-search-form" class="wy-form" action="{{ pathto('search') }}" method="get">
+    <label for="q" class="visually-hidden">Search Documentation</label>
+    <input type="text" name="q" id="q" placeholder="Search docs" aria-label="Search documentation">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+{{ super() }}
+{%- endblock %}

@@ -1,0 +1,39 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Documentation for My Project - A comprehensive Python library">
+<meta name="author" content="Author Name">
+{{ super() }}
+{%- endblock %}
+
+{%- block footer %}
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{{ pathto('installation') }}">Installation</a></li>
+          <li><a href="{{ pathto('usage') }}">Usage Guide</a></li>
+          <li><a href="{{ pathto('api') }}">API Reference</a></li>
+          <li><a href="{{ pathto('contributing') }}">Contributing</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://github.com/username/my-project">GitHub Repository</a></li>
+          <li><a href="{{ pathto('genindex') }}">Index</a></li>
+          <li><a href="{{ pathto('search') }}">Search</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ copyright }}. Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>.</p>
+    </div>
+  </div>
+</footer>
+{{ super() }}
+{%- endblock %}
